@@ -18,8 +18,8 @@
 
     <div class="bg-white p-10 rounded-3xl shadow-2xl w-full max-w-lg text-center border border-gray-200">
         <div class="mb-8">
-            <h1 class="text-4xl font-black text-gray-900 tracking-tight">NIZEPL <span class="text-blue-600">GWO</span></h1>
-            <p class="text-gray-500 mt-2 font-medium">wkrótce WS1P</p>
+            <h1 class="text-4xl font-black text-gray-900 tracking-tight">oski <span class="text-blue-600">GWO</span></h1>
+            <p class="text-gray-500 mt-2 font-medium">wkrótce ws</p>
         </div>
 
         <div id="dropZone" class="drop-zone rounded-3xl p-12 cursor-pointer mb-6 shadow-sm">
@@ -65,7 +65,7 @@
             "Wybór zadań: Rafał Maron",
             "Wybór zadań:"
         ];
-        const TARGET_TEXT = "Wybór zadań: OSKAR DOBROSZKIEWICZ";
+        const TARGET_TEXT = "Wybór zadań: Oskar Dobroszkiewicz";
 
         let currentFileBytes = null;
         let currentFileName = "";
@@ -166,7 +166,7 @@
                 const blob = new Blob([modifiedBytes], { type: 'application/pdf' });
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = `NIZE_${currentFileName}`;
+                link.download = `gwo_{currentFileName}`;
                 link.click();
                 showSuccess(`EDYTOWANO ${positions.length} stron.`);
             } catch (err) {
